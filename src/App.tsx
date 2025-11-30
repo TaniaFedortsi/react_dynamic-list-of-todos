@@ -33,7 +33,7 @@ export const App: React.FC = () => {
     setValue(event.target.value);
   };
 
-  const handleSelect = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  const onSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelected(event.target.value);
   };
 
@@ -99,7 +99,7 @@ export const App: React.FC = () => {
                 value={value}
                 onChange={handleChange}
                 selected={selected}
-                handleSelect={handleSelect}
+                onSelectChange={onSelectChange}
                 onClick={onClick}
               />
             </div>

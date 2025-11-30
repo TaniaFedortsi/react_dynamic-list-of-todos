@@ -2,7 +2,7 @@ type Props = {
   value: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   selected: string;
-  handleSelect: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  onSelectChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
   onClick: () => void;
 };
 
@@ -10,7 +10,7 @@ export const TodoFilter: React.FC<Props> = ({
   value,
   onChange,
   selected,
-  handleSelect,
+  onSelectChange,
   onClick,
 }) => {
   return (
@@ -20,7 +20,7 @@ export const TodoFilter: React.FC<Props> = ({
           <select
             data-cy="statusSelect"
             value={selected}
-            onChange={handleSelect}
+            onChange={onSelectChange}
           >
             <option value="all">All</option>
             <option value="active">Active</option>
